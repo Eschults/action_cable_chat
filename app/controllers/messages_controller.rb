@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     if @message.save
       respond_to do |format|
         format.html { redirect_to chat_room_path(@chat_room) }
-        format.js
+        format.js # display new message to the current_user
       end
     else
       respond_to do |format|
